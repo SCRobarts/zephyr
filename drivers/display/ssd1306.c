@@ -456,10 +456,3 @@ DEVICE_DT_INST_DEFINE(0, ssd1306_init, NULL,
 		      &ssd1306_driver, &ssd1306_config,
 		      POST_KERNEL, CONFIG_DISPLAY_INIT_PRIORITY,
 		      &ssd1306_driver_api);
-
-#define DISPLAY_INIT_PRIORITY 95
-
-DEVICE_AND_API_INIT(ssd1306, DT_INST_LABEL(0), ssd1306_init,
-            &ssd1306_driver, NULL,
-            POST_KERNEL, DISPLAY_INIT_PRIORITY,
-            &ssd1306_driver_api);
